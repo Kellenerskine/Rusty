@@ -11,8 +11,8 @@
 migrate_working_dir/
 
 # rust related
-.exe
-.pdb
+*.exe
+*.pdb
 
 # IntelliJ related
 *.iml
