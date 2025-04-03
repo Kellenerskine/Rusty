@@ -10,6 +10,7 @@
 .svn/
 migrate_working_dir/
 
+# change this I guess when i actually get into using cargo?
 # rust related
 *.exe
 *.pdb
