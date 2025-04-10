@@ -1,14 +1,38 @@
-use std::io;
+use rand::Rng;
+use std::cmp::Ordering;
+use std::io::{self, Write};
 
 fn main() {
+    let secret_number = rand::rng().random_range(1..=100);
+    println!("The secret number is: {secret_number}");
+
     println!("Guess the number!");
-    println!("Please input your guess: ");
-    let mut guess = String::new();
+    print!("Please input your guess: ");
+    io::stdout().flush().expect("io failed");
 
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+    loop {
+        let mut guess = String::new();
 
-    println!("You guessed: {guess}");
-    println!("hi, just making a change for the commit lol")
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
+
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        print!("You guessed: {guess}....which is ");
+        io::stdout().flush().expect("io failed");
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => print!("too smol\nguess again... "),
+            Ordering::Greater => print!("too large\nguess again... "),
+            Ordering::Equal => {
+                println!("a match!");
+                break;
+            }
+        }
+        io::stdout().flush().expect("io failed");
+    }
 }
