@@ -3,10 +3,9 @@ use std::cmp::Ordering;
 use std::io::{self, Write};
 
 fn main() {
-    let secret_number = rand::rng().random_range(1..=100);
-    println!("The secret number is: {secret_number}");
+    let secret_number = rand::rng().random_range(1..=50);
 
-    println!("Guess the number!");
+    println!("Guess a random number between 1 and 50!");
     print!("Please input your guess: ");
     io::stdout().flush().expect("io failed");
 
