@@ -10,4 +10,5 @@ fn main() {
         .expect("Failed to read line");
 
     println!("You guessed: {guess}");
+    println!("hi, just making a change for the commit lol")
 }
