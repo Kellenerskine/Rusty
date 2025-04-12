@@ -1,5 +1,5 @@
 fn main() {
-    println!("Hello World!");
+    println!("Hello Word!");
 
     another_function(5);
 }
