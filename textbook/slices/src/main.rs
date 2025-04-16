@@ -13,7 +13,6 @@ fn main() {
 
     let word = first_word(&s);
     println!("word: {word}");
-
     s.clear();
 }
 
