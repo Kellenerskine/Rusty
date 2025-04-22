@@ -1,3 +1,3 @@
 # Rusty
 Just a place for me to try out some rusty stuff
-testing commit s
+testing commit welp. doing a fake commit. fun stuff i guesss
