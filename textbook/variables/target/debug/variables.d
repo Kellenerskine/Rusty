@@ -1,1 +1,1 @@
-C:\Users\kelle\Documents\code\Rusty\Textbook_Stuff\variables\target\debug\variables.exe: C:\Users\kelle\Documents\code\Rusty\Textbook_Stuff\variables\src\main.rs
+/Users/kellen/Documents/repos/Rusty/textbook/variables/target/debug/variables: /Users/kellen/Documents/repos/Rusty/textbook/variables/src/main.rs
