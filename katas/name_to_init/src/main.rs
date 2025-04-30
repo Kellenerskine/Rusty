@@ -4,9 +4,6 @@
 
 fn abbrev_name(name: &str) -> String {
     let parts: Vec<&str> = name.split_whitespace().collect();
-    // if parts.len() != 2 {
-        // return String::from("Invalid input");
-    // }
     let first_initial = parts[0].chars().next().unwrap().to_ascii_uppercase();
     let second_initial = parts[1].chars().next().unwrap().to_ascii_uppercase();
     format!("{}.{}", first_initial, second_initial)
@@ -15,5 +12,5 @@ fn abbrev_name(name: &str) -> String {
 
 
 fn main() {
-    println!("{}", abbrev_name("Kellen Erskine"));
+    println!("{}", abbrev_name("Martin Greene"));
 }
